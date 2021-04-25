@@ -20,9 +20,9 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'nvim-lua/completion-nvim'
 
 " Command T
-Plug 'wincent/command-t', {
-    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    \ }
+" Plug 'wincent/command-t', {
+"     \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+"     \ }
 
 Plug 'vim-syntastic/syntastic'
 
@@ -37,6 +37,12 @@ Plug 'puremourning/vimspector'
 Plug 'mbbill/undotree'
 
 Plug 'gruvbox-community/gruvbox'
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-symbols.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
