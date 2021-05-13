@@ -21,6 +21,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = true,
   }
 )
+
+-- C#
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/home/david/Downloads/omni/run"
+require'lspconfig'.omnisharp.setup{
+    cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
+}
+
+-- nvim_lsp.omnisharp.setup{on_attach=require'completion'.on_attach}
 EOF
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
