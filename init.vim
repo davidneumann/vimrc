@@ -50,6 +50,8 @@ Plug 'tpope/vim-obsession'
 
 " Plug 'OmniSharp/omnisharp-vim'
 
+Plug 'zhou13/vim-easyescape'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -86,3 +88,8 @@ augroup my_commands
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup End
+
+let g:easyescape_chars = { "j": 1, "k": 1 }
+let g:easyescape_timeout = 100
+cnoremap jk <ESC>
+cnoremap kj <ESC>
