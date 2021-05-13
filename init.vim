@@ -44,6 +44,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+Plug 'tpope/vim-obsession'
+
 " Plug 'OmniSharp/omnisharp-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
