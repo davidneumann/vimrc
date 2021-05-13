@@ -1,9 +1,12 @@
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>t <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fs :lua require'telescope.builtin'.lsp_workspace_symbols{}<cr>
+nnoremap <leader>fsw :lua require'telescope.builtin'.lsp_workspace_symbols{}<cr>
+nnoremap <leader>fsd :lua require'telescope.builtin'.lsp_document_symbols{}<cr>
+nnoremap <leader>s :lua require'telescope.builtin'.lsp_document_symbols{}<cr>
 nnoremap <leader>fe :lua require'telescope.builtin'.symbols{}<cr>
 nnoremap <leader>fr :lua require'telescope.builtin'.lsp_references{}<cr>
 nnoremap <leader>fdd :lua require'telescope.builtin'.lsp_document_diagnostics{}<cr>
