@@ -44,6 +44,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+Plug 'RRethy/vim-illuminate'
+
 Plug 'tpope/vim-obsession'
 
 " Plug 'OmniSharp/omnisharp-vim'
