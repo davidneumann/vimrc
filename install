@@ -9,3 +9,5 @@ for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
     rm -rf ~/.config/nvim/$f
     ln -s $(pwd)/$f ~/.config/nvim/$f
 done
+
+nvim --headless +PlugInstall +qall
