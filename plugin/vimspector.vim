@@ -22,4 +22,5 @@ nmap <leader>drc <Plug>VimspectorRunToCursor
 nmap <leader>d<space> :call vimspector#Continue()<CR>
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
-let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
+
+let g:vimspector_install_gadgets = [ 'CodeLLDB', 'netcoredbg' ]
