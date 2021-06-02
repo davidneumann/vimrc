@@ -29,6 +29,7 @@ local pid = vim.fn.getpid()
 local omnisharp_bin = "/home/david/Downloads/omni/run"
 require'lspconfig'.omnisharp.setup{
     cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
+    on_attach=on_attach;
 }
 
 -- nvim_lsp.omnisharp.setup{on_attach=require'completion'.on_attach}
