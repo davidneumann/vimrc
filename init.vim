@@ -52,6 +52,8 @@ Plug 'tpope/vim-obsession'
 
 Plug 'zhou13/vim-easyescape'
 
+Plug 'pseewald/vim-anyfold'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
