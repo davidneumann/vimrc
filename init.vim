@@ -43,6 +43,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'fannheyward/telescope-coc.nvim'
 
 Plug 'RRethy/vim-illuminate'
 
@@ -53,6 +54,10 @@ Plug 'tpope/vim-obsession'
 Plug 'zhou13/vim-easyescape'
 
 Plug 'pseewald/vim-anyfold'
+
+Plug 'habamax/vim-godot'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

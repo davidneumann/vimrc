@@ -1,7 +1,16 @@
 if (!(Get-Command "nvim" -errorAction SilentlyContinue)) {
-	echo "Installing nvim with choco 'choco install neovim'"
-	choco install neovim
-	exit
+	echo "Installing nvim with choco 'scoop install neovim'"
+    scoop install neovim
+}
+
+#Install ripgrep
+if (!(Get-Command "rg" -errorAction SilentlyContinue)) {
+    scoop install ripgrep
+}
+
+#install fd
+if (!(Get-Command "fd" -errorAction SilentlyContinue)) {
+    scoop install fd
 }
 
 # Install Plug
@@ -12,6 +21,9 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 # Make nvim folders
 if (!(Test-Path "~\AppData\Local\nvim\plugin\") ){
 	mkdir -p "~\AppData\Local\nvim\plugin\"
+}
+if (!(Test-Path "~\AppData\Local\nvim\after\plugin\") ){
+	mkdir -p "~\AppData\Local\nvim\after\plugin\"
 }
 if (!(Test-Path "~\AppData\Local\nvim\lua\") ){
 	mkdir -p "~\AppData\Local\nvim\lua\"
@@ -28,7 +40,9 @@ if(-not(Test-Path -Path $RegistryKeyPath)) {
 echo "Setting up .vim and .lua links"
 foreach ($f in Get-ChildItem -Path . -Include *.lua,*.vim,*.json -Recurse -Force | % { $_ | Resolve-Path -Relative }) {
 	$path = "~\AppData\Local\nvim\$f"
-	rm $path
+    if(Test-Path $path) {
+    	rm $path
+    }
 	New-Item -ItemType SymbolicLink -Path $path -Target $pwd/$f
 }
 

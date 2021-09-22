@@ -33,6 +33,8 @@ require'lspconfig'.omnisharp.setup{
 }
 
 -- nvim_lsp.omnisharp.setup{on_attach=require'completion'.on_attach}
+
+require'lspconfig'.gdscript.setup{}
 EOF
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
